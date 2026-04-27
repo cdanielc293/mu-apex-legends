@@ -19,6 +19,7 @@ const NAV = [
   { to: "/news", label: "News" },
   { to: "/rankings", label: "Rankings" },
   { to: "/classes", label: "Classes" },
+  { to: "/shop", label: "Shop" },
   { to: "/download", label: "Download" },
 ];
 
@@ -89,14 +90,14 @@ export function SiteHeader() {
               <DropdownMenuTrigger asChild>
                 <Button variant="obsidian" size="sm" className="gap-2">
                   <span className="grid h-6 w-6 place-items-center rounded-sm bg-gradient-gold text-[11px] font-bold text-primary-foreground">
-                    {user.username.slice(0, 1).toUpperCase()}
+                    {user.loginName.slice(0, 1).toUpperCase()}
                   </span>
-                  <span className="hidden sm:inline max-w-[10ch] truncate">{user.username}</span>
+                  <span className="hidden sm:inline max-w-[10ch] truncate">{user.loginName}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuLabel className="font-normal">
-                  <p className="text-sm font-semibold">{user.username}</p>
+                  <p className="text-sm font-semibold">{user.loginName}</p>
                   <p className="text-xs text-muted-foreground">{user.email}</p>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />

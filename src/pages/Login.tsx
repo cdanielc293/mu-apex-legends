@@ -13,14 +13,14 @@ export default function Login() {
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const redirect = params.get("redirect") || "/profile";
-  const [email, setEmail] = useState("");
+  const [loginName, setLoginName] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await login(email, password);
+    const { error } = await login(loginName, password);
     setLoading(false);
     if (error) {
       toast.error(error);
@@ -32,10 +32,10 @@ export default function Login() {
 
   const fillDemo = (kind: "admin" | "user") => {
     if (kind === "admin") {
-      setEmail("admin@mu-eternia.gg");
+      setLoginName("gamemaster");
       setPassword("admin123");
     } else {
-      setEmail("player@mu-eternia.gg");
+      setLoginName("wanderinghero");
       setPassword("player123");
     }
   };
@@ -47,15 +47,15 @@ export default function Login() {
     >
       <form onSubmit={onSubmit} className="space-y-5">
         <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="loginName">LoginName</Label>
           <Input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="adventurer@mu-eternia.gg"
+            id="loginName"
+            type="text"
+            value={loginName}
+            onChange={(e) => setLoginName(e.target.value)}
+            placeholder="gamemaster"
             required
-            autoComplete="email"
+            autoComplete="username"
           />
         </div>
         <div className="space-y-2">
@@ -91,7 +91,7 @@ export default function Login() {
               className="rounded-sm border border-border bg-surface-2 px-3 py-2 text-left transition-colors hover:border-primary/40"
             >
               <p className="font-semibold text-foreground">Admin</p>
-              <p className="text-muted-foreground">admin@mu-eternia.gg</p>
+              <p className="text-muted-foreground">gamemaster / admin123</p>
             </button>
             <button
               type="button"
@@ -99,7 +99,7 @@ export default function Login() {
               className="rounded-sm border border-border bg-surface-2 px-3 py-2 text-left transition-colors hover:border-primary/40"
             >
               <p className="font-semibold text-foreground">Player</p>
-              <p className="text-muted-foreground">player@mu-eternia.gg</p>
+              <p className="text-muted-foreground">wanderinghero / player123</p>
             </button>
           </div>
         </div>

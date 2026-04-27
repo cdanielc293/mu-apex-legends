@@ -1,9 +1,14 @@
 /**
- * Mock auth provider.
+ * Mock auth provider — speaks the production schema:
  *
- * Replace the body of `login` / `register` / `logout` with real API calls
- * (e.g. Lovable Cloud / Supabase) — the surface area used by routes and UI
- * does not need to change.
+ *   SELECT "Id", "LoginName", "EMail"
+ *     FROM data."Account"
+ *    WHERE "LoginName" = $1
+ *      AND "PasswordHash" = crypt($2, "PasswordHash");  -- bcrypt in prod
+ *
+ * In this mock we keep a tiny credential table (DEMO_CREDENTIALS) keyed by
+ * LoginName. Replace `login` / `register` bodies with a real call when wiring
+ * the backend — the AuthUser shape and `useAuth()` API stay unchanged.
  */
 import {
   createContext,
@@ -13,41 +18,47 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { useData, type Account } from "@/store/DataContext";
 
 export type AuthUser = {
+  /** maps to Account.Id */
   id: string;
-  username: string;
+  /** maps to Account.LoginName */
+  loginName: string;
+  /** maps to Account.EMail */
   email: string;
+  /** Application-level role (not in data.Account). admin = GM. */
   role: "admin" | "user";
 };
 
 type AuthContextValue = {
   user: AuthUser | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<{ error?: string }>;
-  register: (username: string, email: string, password: string) => Promise<{ error?: string }>;
+  login: (loginName: string, password: string) => Promise<{ error?: string }>;
+  register: (
+    loginName: string,
+    email: string,
+    password: string
+  ) => Promise<{ error?: string }>;
   logout: () => void;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
-const AUTH_KEY = "mu-eternia:auth:v1";
+const AUTH_KEY = "mu-eternia:auth:v2";
 
-// Demo accounts — purely client-side, swap for real auth later.
-const DEMO_ACCOUNTS: { email: string; password: string; user: AuthUser }[] = [
-  {
-    email: "admin@mu-eternia.gg",
-    password: "admin123",
-    user: { id: "auth_1", username: "GameMaster", email: "admin@mu-eternia.gg", role: "admin" },
-  },
-  {
-    email: "player@mu-eternia.gg",
-    password: "player123",
-    user: { id: "auth_2", username: "WanderingHero", email: "player@mu-eternia.gg", role: "user" },
-  },
-];
+/** Demo credentials — replaced by real bcrypt verification in production. */
+const DEMO_CREDENTIALS: Record<string, { password: string; role: "admin" | "user" }> = {
+  gamemaster: { password: "admin123", role: "admin" },
+  wanderinghero: { password: "player123", role: "user" },
+};
+
+function accountToAuthUser(a: Account, role: "admin" | "user"): AuthUser {
+  return { id: a.Id, loginName: a.LoginName, email: a.EMail, role };
+}
 
 export function AuthProvider({ children }: { children: ReactNode }) {
+  const { accounts, updateAccount } = useData();
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -61,37 +72,65 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setLoading(false);
   }, []);
 
-  const persist = (next: AuthUser | null) => {
+  const persist = useCallback((next: AuthUser | null) => {
     if (next) localStorage.setItem(AUTH_KEY, JSON.stringify(next));
     else localStorage.removeItem(AUTH_KEY);
     setUser(next);
-  };
-
-  const login = useCallback(async (email: string, password: string) => {
-    await new Promise((r) => setTimeout(r, 350));
-    const match = DEMO_ACCOUNTS.find(
-      (a) => a.email.toLowerCase() === email.trim().toLowerCase() && a.password === password
-    );
-    if (!match) return { error: "Invalid credentials. Try admin@mu-eternia.gg / admin123." };
-    persist(match.user);
-    return {};
   }, []);
 
-  const register = useCallback(async (username: string, email: string, password: string) => {
-    await new Promise((r) => setTimeout(r, 400));
-    if (!username || !email || password.length < 6)
-      return { error: "Please fill all fields. Password must be at least 6 characters." };
-    const newUser: AuthUser = {
-      id: `auth_${Date.now()}`,
-      username,
-      email,
-      role: "user",
-    };
-    persist(newUser);
-    return {};
-  }, []);
+  const login = useCallback(
+    async (loginName: string, password: string) => {
+      await new Promise((r) => setTimeout(r, 300));
+      const key = loginName.trim().toLowerCase();
+      const creds = DEMO_CREDENTIALS[key];
+      if (!creds || creds.password !== password) {
+        return { error: "Invalid credentials. Try gamemaster / admin123." };
+      }
+      const account = accounts.find((a) => a.LoginName.toLowerCase() === key);
+      if (!account) return { error: "Account not found." };
 
-  const logout = useCallback(() => persist(null), []);
+      // Mark online: UPDATE data."Account" SET "State" = 1 WHERE "Id" = $1
+      updateAccount(account.Id, { State: 1 });
+      persist(accountToAuthUser(account, creds.role));
+      return {};
+    },
+    [accounts, updateAccount, persist]
+  );
+
+  const register = useCallback(
+    async (loginName: string, email: string, password: string) => {
+      await new Promise((r) => setTimeout(r, 350));
+      if (!loginName || !email || password.length < 6) {
+        return {
+          error:
+            "Please fill all fields. Password must be at least 6 characters.",
+        };
+      }
+      const key = loginName.trim().toLowerCase();
+      if (accounts.some((a) => a.LoginName.toLowerCase() === key)) {
+        return { error: "That LoginName is already taken." };
+      }
+      // In production this would INSERT INTO data."Account" (...) RETURNING *.
+      const newUser: AuthUser = {
+        id: `auth_${Date.now()}`,
+        loginName: key,
+        email,
+        role: "user",
+      };
+      persist(newUser);
+      return {};
+    },
+    [accounts, persist]
+  );
+
+  const logout = useCallback(() => {
+    if (user) {
+      // UPDATE data."Account" SET "State" = 0 WHERE "Id" = $1
+      const acct = accounts.find((a) => a.Id === user.id);
+      if (acct) updateAccount(acct.Id, { State: 0 });
+    }
+    persist(null);
+  }, [user, accounts, updateAccount, persist]);
 
   return (
     <AuthContext.Provider value={{ user, loading, login, register, logout }}>

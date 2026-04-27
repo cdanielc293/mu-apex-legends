@@ -11,24 +11,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+const fmt = (n: number) => n.toLocaleString();
+
 export default function Rankings() {
   const { rankings } = useData();
   const [q, setQ] = useState("");
   const [cls, setCls] = useState<string>("all");
 
   const classes = useMemo(
-    () => Array.from(new Set(rankings.map((r) => r.class))).sort(),
+    () => Array.from(new Set(rankings.map((r) => r.ClassName))).sort(),
     [rankings]
   );
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return rankings.filter((r) => {
-      if (cls !== "all" && r.class !== cls) return false;
+      if (cls !== "all" && r.ClassName !== cls) return false;
       if (!needle) return true;
       return (
-        r.name.toLowerCase().includes(needle) ||
-        (r.guild ?? "").toLowerCase().includes(needle)
+        r.Name.toLowerCase().includes(needle) ||
+        r.LoginName.toLowerCase().includes(needle)
       );
     });
   }, [rankings, q, cls]);
@@ -47,7 +49,11 @@ export default function Rankings() {
             <span className="text-gold-gradient">100 Adventurers</span>
           </h1>
           <p className="mt-3 max-w-xl text-muted-foreground">
-            Real-time standings of the realm's most legendary warriors.
+            Sorted by <span className="text-primary">Experience</span> from{" "}
+            <code className="rounded-sm bg-surface-2 px-1.5 py-0.5 text-xs">
+              data.&quot;Character&quot;
+            </code>{" "}
+            (descending). Updated continuously.
           </p>
         </div>
       </section>
@@ -63,7 +69,7 @@ export default function Rankings() {
             <Input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search adventurers or guilds..."
+              placeholder="Search character or login name..."
               className="pl-9"
             />
           </div>
@@ -84,20 +90,20 @@ export default function Rankings() {
 
         {/* Table */}
         <div className="surface-card overflow-hidden rounded-sm">
-          <div className="grid grid-cols-[60px_1fr_120px_80px_90px] items-center border-b border-border bg-surface-2/80 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-muted-foreground sm:grid-cols-[60px_1fr_160px_120px_100px_120px]">
+          <div className="grid grid-cols-[60px_1fr_80px_110px] items-center border-b border-border bg-surface-2/80 px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-muted-foreground sm:grid-cols-[60px_1fr_160px_90px_140px_90px]">
             <span>Rank</span>
-            <span>Adventurer</span>
+            <span>Name</span>
             <span className="hidden sm:block">Class</span>
             <span className="text-right">Level</span>
-            <span className="text-right">Resets</span>
-            <span className="hidden text-right sm:block">Guild</span>
+            <span className="hidden text-right sm:block">Experience</span>
+            <span className="text-right">PK</span>
           </div>
 
           <ul className="divide-y divide-border/60">
             {filtered.map((p) => (
               <li
-                key={p.rank}
-                className="grid grid-cols-[60px_1fr_120px_80px_90px] items-center px-4 py-3 transition-colors hover:bg-surface-2/60 sm:grid-cols-[60px_1fr_160px_120px_100px_120px]"
+                key={p.CharacterId}
+                className="grid grid-cols-[60px_1fr_80px_110px] items-center px-4 py-3 transition-colors hover:bg-surface-2/60 sm:grid-cols-[60px_1fr_160px_90px_140px_90px]"
               >
                 <span
                   className={`grid h-7 w-7 place-items-center rounded-sm text-xs font-bold ${
@@ -111,35 +117,37 @@ export default function Rankings() {
                   {p.rank === 1 ? <Crown size={14} /> : p.rank}
                 </span>
                 <div className="min-w-0">
-                  <p className="truncate font-semibold">{p.name}</p>
+                  <p className="truncate font-semibold">{p.Name}</p>
                   <p className="text-xs text-muted-foreground sm:hidden">
-                    {p.class}
-                    {p.guild ? ` · ${p.guild}` : ""}
+                    {p.ClassName} · Exp {fmt(p.Experience)}
+                  </p>
+                  <p className="hidden text-xs text-muted-foreground sm:block">
+                    @{p.LoginName}
                   </p>
                 </div>
                 <span className="hidden truncate text-sm text-muted-foreground sm:block">
-                  {p.class}
+                  {p.ClassName}
                 </span>
                 <span className="text-right font-mono text-sm font-semibold text-primary">
-                  {p.level}
+                  {p.Level}
                 </span>
-                <span className="text-right font-mono text-sm">{p.resets}</span>
-                <span className="hidden truncate text-right text-sm text-muted-foreground sm:block">
-                  {p.guild ?? "—"}
+                <span className="hidden text-right font-mono text-xs text-muted-foreground sm:block">
+                  {fmt(p.Experience)}
                 </span>
+                <span className="text-right font-mono text-sm">{p.PlayerKillCount}</span>
               </li>
             ))}
             {filtered.length === 0 && (
               <li className="flex flex-col items-center justify-center gap-2 px-4 py-16 text-center">
                 <Trophy size={28} className="text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">No adventurers match your search.</p>
+                <p className="text-sm text-muted-foreground">No characters match your search.</p>
               </li>
             )}
           </ul>
         </div>
 
         <p className="mt-3 text-xs text-muted-foreground">
-          Showing {filtered.length} of {rankings.length} adventurers.
+          Showing {filtered.length} of {rankings.length} characters.
         </p>
       </section>
     </SiteLayout>

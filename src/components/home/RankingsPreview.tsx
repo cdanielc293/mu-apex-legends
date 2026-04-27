@@ -62,16 +62,15 @@ export function RankingsPreview() {
                     {p.rank}
                   </span>
                   <div className="min-w-0">
-                    <p className="truncate font-semibold">{p.name}</p>
+                    <p className="truncate font-semibold">{p.Name}</p>
                     <p className="text-xs text-muted-foreground">
-                      {p.class}
-                      {p.guild ? ` · ${p.guild}` : ""}
+                      {p.ClassName} · @{p.LoginName}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="font-mono text-sm font-semibold text-primary">Lv {p.level}</p>
+                    <p className="font-mono text-sm font-semibold text-primary">Lv {p.Level}</p>
                     <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
-                      {p.resets} resets
+                      {p.Experience.toLocaleString()} EXP
                     </p>
                   </div>
                 </li>

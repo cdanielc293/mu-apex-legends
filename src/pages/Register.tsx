@@ -36,14 +36,15 @@ export default function Register() {
     >
       <form onSubmit={onSubmit} className="space-y-5">
         <div className="space-y-2">
-          <Label htmlFor="username">Adventurer Name</Label>
+          <Label htmlFor="loginName">LoginName</Label>
           <Input
-            id="username"
+            id="loginName"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="LordVexheim"
+            placeholder="lordvexheim"
             required
             minLength={3}
+            autoComplete="username"
           />
         </div>
         <div className="space-y-2">

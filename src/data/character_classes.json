@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "Id": "80baf930-f2fa-faef-732d-c13b55c9ffe5",
+      "Name": "Dark Knight"
+    },
+    {
+      "Id": "e381cbfb-62d3-6092-5e41-41915c712932",
+      "Name": "Dark Wizard"
+    },
+    {
+      "Id": "da1151b5-9b96-2294-5fc1-26498d9a5ff3",
+      "Name": "Elf"
+    },
+    {
+      "Id": "d987a631-d3c6-52fd-daa3-c1b68a9f2e51",
+      "Name": "Magic Gladiator"
+    },
+    {
+      "Id": "4c2412e7-e5ba-6006-4280-9123b817c2fc",
+      "Name": "Dark Lord"
+    },
+    {
+      "Id": "f9bfb6af-ff04-5340-d316-78b24aa27648",
+      "Name": "Summoner"
+    },
+    {
+      "Id": "9b46273e-8819-2d67-dbb5-8cb88769fcd9",
+      "Name": "Rage Fighter"
+    },
+    {
+      "Id": "798e16fc-a2d0-6aae-1d0c-aa6518849890",
+      "Name": "Grow Lancer"
+    },
+    {
+      "Id": "5a90fca4-f1ef-4dbd-62f2-14639d04cd57",
+      "Name": "Rune Wizard"
+    }
+  ]
+}
