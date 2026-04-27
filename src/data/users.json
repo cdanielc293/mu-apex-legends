@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "id": "u_001",
+      "username": "NightIliyas",
+      "email": "player1@mu-eternia.gg",
+      "role": "admin",
+      "status": "active",
+      "created_at": "2024-04-03",
+      "last_login": "2025-04-19"
+    },
+    {
+      "id": "u_002",
+      "username": "DameMireth",
+      "email": "player2@mu-eternia.gg",
+      "role": "admin",
+      "status": "active",
+      "created_at": "2024-06-05",
+      "last_login": "2025-04-20"
+    },
+    {
+      "id": "u_003",
+      "username": "SoulNyx",
+      "email": "player3@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-04-16",
+      "last_login": "2025-04-16"
+    },
+    {
+      "id": "u_004",
+      "username": "RuneVex",
+      "email": "player4@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-08-22",
+      "last_login": "2025-04-15"
+    },
+    {
+      "id": "u_005",
+      "username": "RuneOrin",
+      "email": "player5@mu-eternia.gg",
+      "role": "user",
+      "status": "banned",
+      "created_at": "2024-06-13",
+      "last_login": "2025-04-11"
+    },
+    {
+      "id": "u_006",
+      "username": "KingVael",
+      "email": "player6@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-06-27",
+      "last_login": "2025-04-13"
+    },
+    {
+      "id": "u_007",
+      "username": "KingKael",
+      "email": "player7@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-05-12",
+      "last_login": "2025-04-03"
+    },
+    {
+      "id": "u_008",
+      "username": "RuneIliyas",
+      "email": "player8@mu-eternia.gg",
+      "role": "moderator",
+      "status": "active",
+      "created_at": "2024-06-14",
+      "last_login": "2025-04-25"
+    },
+    {
+      "id": "u_009",
+      "username": "NightDrakar",
+      "email": "player9@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-01-27",
+      "last_login": "2025-04-22"
+    },
+    {
+      "id": "u_010",
+      "username": "CrimsonMireth",
+      "email": "player10@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-07-17",
+      "last_login": "2025-04-11"
+    },
+    {
+      "id": "u_011",
+      "username": "IronSkarn",
+      "email": "player11@mu-eternia.gg",
+      "role": "user",
+      "status": "active",
+      "created_at": "2024-11-13",
+      "last_login": "2025-04-18"
+    },
+    {
+      "id": "u_012",
+      "username": "IronLyra",
+      "email": "player12@mu-eternia.gg",
+      "role": "user",
+      "status": "banned",
+      "created_at": "2024-08-20",
+      "last_login": "2025-04-25"
+    }
+  ]
+}

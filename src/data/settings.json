@@ -1,0 +1,18 @@
+{
+  "server_name": "Mu Eternia",
+  "season": "Season XX",
+  "version": "1.0.0",
+  "exp_rate": 500,
+  "drop_rate": 50,
+  "max_level": 1500,
+  "max_resets": 100,
+  "discord_url": "https://discord.gg/mu-eternia",
+  "maintenance_mode": false,
+  "maintenance_message": "Servers are undergoing scheduled maintenance. We will return shortly.",
+  "download_links": [
+    { "title": "Full Client (Mega)", "url": "https://example.com/download/full-mega", "size": "4.8 GB" },
+    { "title": "Full Client (Google Drive)", "url": "https://example.com/download/full-gdrive", "size": "4.8 GB" },
+    { "title": "Patcher Only", "url": "https://example.com/download/patcher", "size": "12 MB" },
+    { "title": "Torrent", "url": "https://example.com/download/torrent", "size": "—" }
+  ]
+}

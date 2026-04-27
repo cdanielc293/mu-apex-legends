@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Castle Siege Season Finale — Reward Pool Doubled",
+      "category": "Event",
+      "date": "2025-04-22",
+      "excerpt": "The eternal war for the obsidian throne reaches its climax. All winning guilds receive a doubled reward chest.",
+      "content": "The final Castle Siege of the season takes place this Saturday at 20:00 UTC. We have doubled the reward pool — winning guilds will receive Bound Jewels of Harmony x500, Excellent Ancient sets, and a unique guild title valid until next season.\n\nMake sure your guild is registered no later than Friday 23:59 UTC."
+    },
+    {
+      "id": 2,
+      "title": "Patch 1.4.2 — Class Balance & Bug Fixes",
+      "category": "Patch",
+      "date": "2025-04-18",
+      "excerpt": "Sorceress nerf, Dark Knight buff, and 27 quality-of-life improvements roll out tonight.",
+      "content": "Patch notes:\n• Sorceress: Evil Spirit damage reduced by 6%.\n• Dark Knight: Death Stab cooldown -0.3s.\n• Fixed an exploit in Chaos Castle.\n• Added gold filter to Ranking page.\n• Improved client launcher stability."
+    },
+    {
+      "id": 3,
+      "title": "New Map: The Forsaken Cathedral",
+      "category": "Update",
+      "date": "2025-04-10",
+      "excerpt": "A new high-level map opens its gates. Hunt the Wraith King and earn the new Mythic relic set.",
+      "content": "The Forsaken Cathedral is now live for adventurers level 800+. Inside, you will face elite undead and the Wraith King boss every 3 hours. Drops include the brand-new Mythic Relic set and the Crown of Eternia."
+    },
+    {
+      "id": 4,
+      "title": "Spring Drop Event — +100% Jewels",
+      "category": "Event",
+      "date": "2025-04-01",
+      "excerpt": "For two weeks, jewel drop rates are doubled across all hunting grounds.",
+      "content": "From April 1 to April 14, all jewel drops (Bless, Soul, Chaos, Life, Creation, Harmony) have doubled drop rates. Stack up before the event ends."
+    }
+  ]
+}
