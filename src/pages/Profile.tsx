@@ -16,12 +16,12 @@ export default function Profile() {
           <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center">
             <div className="grid h-20 w-20 place-items-center rounded-sm bg-gradient-gold text-primary-foreground shadow-gold-lg shadow-inset-gold">
               <span className="font-display text-3xl font-bold">
-                {user.username.slice(0, 1).toUpperCase()}
+                {user.loginName.slice(0, 1).toUpperCase()}
               </span>
             </div>
             <div className="flex-1">
               <p className="text-xs uppercase tracking-[0.3em] text-primary">Adventurer</p>
-              <h1 className="font-display text-3xl font-bold md:text-4xl">{user.username}</h1>
+              <h1 className="font-display text-3xl font-bold md:text-4xl">{user.loginName}</h1>
               <p className="text-muted-foreground">{user.email}</p>
               <span className="mt-3 inline-flex items-center gap-1.5 rounded-sm bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
                 {user.role === "admin" ? <Shield size={12} /> : <Crown size={12} />} {user.role}
