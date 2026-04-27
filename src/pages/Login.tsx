@@ -91,7 +91,7 @@ export default function Login() {
               className="rounded-sm border border-border bg-surface-2 px-3 py-2 text-left transition-colors hover:border-primary/40"
             >
               <p className="font-semibold text-foreground">Admin</p>
-              <p className="text-muted-foreground">admin@mu-eternia.gg</p>
+              <p className="text-muted-foreground">gamemaster / admin123</p>
             </button>
             <button
               type="button"
@@ -99,7 +99,7 @@ export default function Login() {
               className="rounded-sm border border-border bg-surface-2 px-3 py-2 text-left transition-colors hover:border-primary/40"
             >
               <p className="font-semibold text-foreground">Player</p>
-              <p className="text-muted-foreground">player@mu-eternia.gg</p>
+              <p className="text-muted-foreground">wanderinghero / player123</p>
             </button>
           </div>
         </div>
