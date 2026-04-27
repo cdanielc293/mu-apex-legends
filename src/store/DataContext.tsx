@@ -271,8 +271,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
     return m;
   }, [accounts]);
 
-  /** ORDER BY "Experience" DESC LIMIT 100 */
-  const rankings = useMemo<RankingRow[]>(() => {
+  // ------- Live API state (rankings + online count) -------
+  // The Mu Eternia game server exposes:
+  //   GET /api/rankings -> [{ Name, Experience }]
+  //   GET /api/stats    -> { onlineCount }
+  // We poll both on a 30s cadence and fall back to the mock characters/accounts
+  // dataset on transient failure so the UI never goes blank.
+
+  const mockRankings = useMemo<RankingRow[]>(() => {
     const sorted = [...characters].sort((a, b) => b.Experience - a.Experience).slice(0, 100);
     return sorted.map((c, i) => ({
       rank: i + 1,
@@ -286,14 +292,75 @@ export function DataProvider({ children }: { children: ReactNode }) {
     }));
   }, [characters, classNameById, accountById]);
 
-  /** Live: SELECT COUNT(*) FROM data."Account" WHERE "State" > 0 */
-  const onlinePlayerCount = useMemo(
+  const mockOnlineCount = useMemo(
     () => accounts.reduce((n, a) => (a.State > 0 ? n + 1 : n), 0),
     [accounts]
   );
 
+  const [liveRankings, setLiveRankings] = useState<RankingRow[] | null>(null);
+  const [liveOnlineCount, setLiveOnlineCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const ctrl = new AbortController();
+
+    const loadRankings = async () => {
+      try {
+        const rows = await fetchRankings(ctrl.signal);
+        const mapped: RankingRow[] = rows
+          .map((r) => ({
+            Name: r.Name,
+            Experience: typeof r.Experience === "string" ? Number(r.Experience) : r.Experience,
+          }))
+          .sort((a, b) => b.Experience - a.Experience)
+          .slice(0, 100)
+          .map((r, i) => ({
+            rank: i + 1,
+            CharacterId: r.Name, // API does not expose Character.Id; name is unique
+            Name: r.Name,
+            Level: levelFromExperience(r.Experience),
+            Experience: r.Experience,
+            PlayerKillCount: 0, // not provided by /api/rankings
+            ClassName: classNameFromCharacterName(r.Name),
+            LoginName: "—", // not provided by /api/rankings
+          }));
+        setLiveRankings(mapped);
+      } catch (err) {
+        if ((err as { name?: string })?.name !== "AbortError") {
+          console.warn("[DataContext] /api/rankings failed, using mock", err);
+        }
+      }
+    };
+
+    const loadStats = async () => {
+      try {
+        const s = await fetchStats(ctrl.signal);
+        const n = typeof s.onlineCount === "string" ? Number(s.onlineCount) : s.onlineCount;
+        if (Number.isFinite(n)) setLiveOnlineCount(n);
+      } catch (err) {
+        if ((err as { name?: string })?.name !== "AbortError") {
+          console.warn("[DataContext] /api/stats failed, using mock", err);
+        }
+      }
+    };
+
+    loadRankings();
+    loadStats();
+    const t = setInterval(() => {
+      loadRankings();
+      loadStats();
+    }, 30_000);
+
+    return () => {
+      ctrl.abort();
+      clearInterval(t);
+    };
+  }, []);
+
+  const rankings = liveRankings ?? mockRankings;
+  const onlinePlayerCount = liveOnlineCount ?? mockOnlineCount;
+
   // Recompose serverStatus so consumers reading `serverStatus.online_count`
-  // also get the live SQL-derived value (and respect MaximumPlayers).
+  // also get the live API-derived value (and respect MaximumPlayers).
   const serverStatus = useMemo<ServerStatus>(
     () => ({
       ...baseStatus,
