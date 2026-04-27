@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "id": "itm_chest_gold",
+      "name": "Eternia Treasure Chest",
+      "description": "Random rare jewels and ancient relics. Guaranteed Bless x10.",
+      "price_points": 1500,
+      "category": "Bundle",
+      "image_key": "chest"
+    },
+    {
+      "id": "itm_potion_mana",
+      "name": "Greater Mana Potion x100",
+      "description": "Restores 5,000 mana instantly. Stacks up to 999.",
+      "price_points": 250,
+      "category": "Consumable",
+      "image_key": "potion"
+    },
+    {
+      "id": "itm_sword_excellent",
+      "name": "Excellent Dragon Slayer",
+      "description": "+9 +28 sword with luck and skill options.",
+      "price_points": 4800,
+      "category": "Weapon",
+      "image_key": "sword"
+    },
+    {
+      "id": "itm_jewel_bless",
+      "name": "Jewel of Bless x30",
+      "description": "Guaranteed bound jewels for safe upgrades.",
+      "price_points": 900,
+      "category": "Jewel",
+      "image_key": "jewel"
+    },
+    {
+      "id": "itm_pet_raven",
+      "name": "Dark Lord Raven",
+      "description": "A loyal raven companion. Boosts attack power.",
+      "price_points": 3200,
+      "category": "Pet",
+      "image_key": "pet"
+    },
+    {
+      "id": "itm_wings_third",
+      "name": "Wings of Eternia (3rd)",
+      "description": "3rd-tier wings with +30 damage absorb.",
+      "price_points": 6800,
+      "category": "Wings",
+      "image_key": "wings"
+    },
+    {
+      "id": "itm_chest_silver",
+      "name": "Adventurer Chest",
+      "description": "Common cosmetics and small jewel pack.",
+      "price_points": 500,
+      "category": "Bundle",
+      "image_key": "chest"
+    },
+    {
+      "id": "itm_potion_shield",
+      "name": "Shield Potion x50",
+      "description": "Protective shield for 30 minutes.",
+      "price_points": 350,
+      "category": "Consumable",
+      "image_key": "potion"
+    }
+  ]
+}
