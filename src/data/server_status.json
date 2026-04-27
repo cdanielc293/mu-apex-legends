@@ -1,0 +1,12 @@
+{
+  "online_count": 1842,
+  "max_capacity": 3000,
+  "status": "online",
+  "uptime_days": 412,
+  "last_restart": "2025-04-12T03:00:00Z",
+  "regions": [
+    { "name": "Eternia I", "online": 642, "status": "online" },
+    { "name": "Eternia II", "online": 588, "status": "online" },
+    { "name": "Eternia III - PvP", "online": 612, "status": "online" }
+  ]
+}
