@@ -33,6 +33,13 @@ import classesData from "@/data/character_classes.json";
 import gameServerConfigData from "@/data/game_server_configuration.json";
 import shopItemsData from "@/data/shop_items.json";
 
+import {
+  fetchRankings,
+  fetchStats,
+  levelFromExperience,
+  classNameFromCharacterName,
+} from "@/lib/api";
+
 // ============================================================
 // SQL-shaped types
 // ============================================================
