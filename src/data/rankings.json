@@ -1,0 +1,904 @@
+{
+  "items": [
+    {
+      "rank": 1,
+      "name": "FrostVorn",
+      "level": 1417,
+      "resets": 97,
+      "class": "Dark Knight",
+      "guild": "Eternia",
+      "score": 11112
+    },
+    {
+      "rank": 2,
+      "name": "ShadowKorrinax",
+      "level": 1472,
+      "resets": 96,
+      "class": "Magic Gladiator",
+      "guild": "GoldenAegis",
+      "score": 11042
+    },
+    {
+      "rank": 3,
+      "name": "SirVornheim",
+      "level": 1122,
+      "resets": 99,
+      "class": "Dark Knight",
+      "guild": "RuneWardens",
+      "score": 11007
+    },
+    {
+      "rank": 4,
+      "name": "EmberMirethwyn",
+      "level": 949,
+      "resets": 97,
+      "class": "Rune Wizard",
+      "guild": "Eternia",
+      "score": 10649
+    },
+    {
+      "rank": 5,
+      "name": "WraithMordraheim",
+      "level": 1142,
+      "resets": 95,
+      "class": "Rune Wizard",
+      "guild": "CrimsonPact",
+      "score": 10632
+    },
+    {
+      "rank": 6,
+      "name": "RuneDrakargath",
+      "level": 939,
+      "resets": 97,
+      "class": "Elf",
+      "guild": "NightVeil",
+      "score": 10619
+    },
+    {
+      "rank": 7,
+      "name": "IronRenyair",
+      "level": 1428,
+      "resets": 92,
+      "class": "Summoner",
+      "guild": "ShadowReign",
+      "score": 10588
+    },
+    {
+      "rank": 8,
+      "name": "WraithMireththal",
+      "level": 1010,
+      "resets": 96,
+      "class": "Dark Lord",
+      "guild": "Valhalla",
+      "score": 10585
+    },
+    {
+      "rank": 9,
+      "name": "OnyxSkarndrel",
+      "level": 1136,
+      "resets": 94,
+      "class": "Elf",
+      "guild": null,
+      "score": 10491
+    },
+    {
+      "rank": 10,
+      "name": "KingAshenen",
+      "level": 950,
+      "resets": 94,
+      "class": "Dark Knight",
+      "guild": "RuneWardens",
+      "score": 10315
+    },
+    {
+      "rank": 11,
+      "name": "StormLyraax",
+      "level": 1187,
+      "resets": 91,
+      "class": "Grow Lancer",
+      "guild": "GoldenAegis",
+      "score": 10237
+    },
+    {
+      "rank": 12,
+      "name": "ShadowVaelmort",
+      "level": 1376,
+      "resets": 88,
+      "class": "Dark Knight",
+      "guild": null,
+      "score": 10116
+    },
+    {
+      "rank": 13,
+      "name": "GoldLyra",
+      "level": 1187,
+      "resets": 87,
+      "class": "Grow Lancer",
+      "guild": "NightVeil",
+      "score": 9812
+    },
+    {
+      "rank": 14,
+      "name": "GoldVornros",
+      "level": 942,
+      "resets": 89,
+      "class": "Dark Wizard",
+      "guild": "NightVeil",
+      "score": 9772
+    },
+    {
+      "rank": 15,
+      "name": "DameAshenax",
+      "level": 1195,
+      "resets": 86,
+      "class": "Summoner",
+      "guild": "RuneWardens",
+      "score": 9730
+    },
+    {
+      "rank": 16,
+      "name": "KingRenya",
+      "level": 1089,
+      "resets": 86,
+      "class": "Dark Lord",
+      "guild": "BloodMoon",
+      "score": 9604
+    },
+    {
+      "rank": 17,
+      "name": "RuneSkarn",
+      "level": 1340,
+      "resets": 83,
+      "class": "Elf",
+      "guild": "RuneWardens",
+      "score": 9560
+    },
+    {
+      "rank": 18,
+      "name": "OnyxOrinax",
+      "level": 952,
+      "resets": 86,
+      "class": "Rune Wizard",
+      "guild": "CrimsonPact",
+      "score": 9497
+    },
+    {
+      "rank": 19,
+      "name": "RuneAshendrel",
+      "level": 1002,
+      "resets": 84,
+      "class": "Rage Fighter",
+      "guild": "Valhalla",
+      "score": 9307
+    },
+    {
+      "rank": 20,
+      "name": "StormIliyaswyn",
+      "level": 1372,
+      "resets": 79,
+      "class": "Elf",
+      "guild": "ShadowReign",
+      "score": 9182
+    },
+    {
+      "rank": 21,
+      "name": "NightMordraion",
+      "level": 1249,
+      "resets": 78,
+      "class": "Elf",
+      "guild": "Eternia",
+      "score": 8949
+    },
+    {
+      "rank": 22,
+      "name": "SirCaelumir",
+      "level": 1424,
+      "resets": 76,
+      "class": "Rage Fighter",
+      "guild": "CrimsonPact",
+      "score": 8904
+    },
+    {
+      "rank": 23,
+      "name": "ShadowMirethgath",
+      "level": 1096,
+      "resets": 76,
+      "class": "Grow Lancer",
+      "guild": "RuneWardens",
+      "score": 8591
+    },
+    {
+      "rank": 24,
+      "name": "FrostSeleneax",
+      "level": 1180,
+      "resets": 75,
+      "class": "Rune Wizard",
+      "guild": "RuneWardens",
+      "score": 8565
+    },
+    {
+      "rank": 25,
+      "name": "ShadowNyxdrel",
+      "level": 860,
+      "resets": 76,
+      "class": "Rage Fighter",
+      "guild": "Valhalla",
+      "score": 8350
+    },
+    {
+      "rank": 26,
+      "name": "RuneKorrinros",
+      "level": 1260,
+      "resets": 72,
+      "class": "Magic Gladiator",
+      "guild": "Eternia",
+      "score": 8335
+    },
+    {
+      "rank": 27,
+      "name": "LordVornmort",
+      "level": 1395,
+      "resets": 70,
+      "class": "Summoner",
+      "guild": "RuneWardens",
+      "score": 8260
+    },
+    {
+      "rank": 28,
+      "name": "FrostRenyaheim",
+      "level": 960,
+      "resets": 74,
+      "class": "Grow Lancer",
+      "guild": "ShadowReign",
+      "score": 8215
+    },
+    {
+      "rank": 29,
+      "name": "IronCaelummort",
+      "level": 960,
+      "resets": 73,
+      "class": "Dark Knight",
+      "guild": "Eternia",
+      "score": 8130
+    },
+    {
+      "rank": 30,
+      "name": "LordLyragath",
+      "level": 1229,
+      "resets": 70,
+      "class": "Dark Lord",
+      "guild": "GoldenAegis",
+      "score": 8089
+    },
+    {
+      "rank": 31,
+      "name": "EmberNyxros",
+      "level": 1003,
+      "resets": 70,
+      "class": "Dark Knight",
+      "guild": "DragonFangs",
+      "score": 7848
+    },
+    {
+      "rank": 32,
+      "name": "SoulSkarnmort",
+      "level": 1392,
+      "resets": 65,
+      "class": "Rune Wizard",
+      "guild": "NightVeil",
+      "score": 7732
+    },
+    {
+      "rank": 33,
+      "name": "RuneThessagath",
+      "level": 1360,
+      "resets": 65,
+      "class": "Summoner",
+      "guild": null,
+      "score": 7685
+    },
+    {
+      "rank": 34,
+      "name": "SoulVaelir",
+      "level": 1060,
+      "resets": 67,
+      "class": "Magic Gladiator",
+      "guild": "DragonFangs",
+      "score": 7590
+    },
+    {
+      "rank": 35,
+      "name": "GoldRenyadrel",
+      "level": 927,
+      "resets": 68,
+      "class": "Dark Wizard",
+      "guild": null,
+      "score": 7577
+    },
+    {
+      "rank": 36,
+      "name": "DameNyxthal",
+      "level": 1209,
+      "resets": 65,
+      "class": "Summoner",
+      "guild": "DragonFangs",
+      "score": 7544
+    },
+    {
+      "rank": 37,
+      "name": "LordVexdrel",
+      "level": 1311,
+      "resets": 63,
+      "class": "Magic Gladiator",
+      "guild": null,
+      "score": 7431
+    },
+    {
+      "rank": 38,
+      "name": "LordRenyair",
+      "level": 1174,
+      "resets": 64,
+      "class": "Dark Wizard",
+      "guild": null,
+      "score": 7379
+    },
+    {
+      "rank": 39,
+      "name": "FrostCaelumen",
+      "level": 1183,
+      "resets": 62,
+      "class": "Dark Wizard",
+      "guild": "DragonFangs",
+      "score": 7198
+    },
+    {
+      "rank": 40,
+      "name": "OnyxMirethax",
+      "level": 1299,
+      "resets": 59,
+      "class": "Summoner",
+      "guild": "BloodMoon",
+      "score": 6984
+    },
+    {
+      "rank": 41,
+      "name": "KingThessaros",
+      "level": 1025,
+      "resets": 61,
+      "class": "Magic Gladiator",
+      "guild": "ShadowReign",
+      "score": 6935
+    },
+    {
+      "rank": 42,
+      "name": "EmberLyraen",
+      "level": 1223,
+      "resets": 59,
+      "class": "Rage Fighter",
+      "guild": null,
+      "score": 6918
+    },
+    {
+      "rank": 43,
+      "name": "KingIliyasen",
+      "level": 1024,
+      "resets": 60,
+      "class": "Elf",
+      "guild": "CrimsonPact",
+      "score": 6824
+    },
+    {
+      "rank": 44,
+      "name": "SirSkarnros",
+      "level": 1403,
+      "resets": 56,
+      "class": "Rune Wizard",
+      "guild": "CrimsonPact",
+      "score": 6768
+    },
+    {
+      "rank": 45,
+      "name": "MasterVex",
+      "level": 917,
+      "resets": 57,
+      "class": "Elf",
+      "guild": "CrimsonPact",
+      "score": 6397
+    },
+    {
+      "rank": 46,
+      "name": "StormVornion",
+      "level": 1073,
+      "resets": 55,
+      "class": "Rage Fighter",
+      "guild": "BloodMoon",
+      "score": 6343
+    },
+    {
+      "rank": 47,
+      "name": "SoulTyriusthal",
+      "level": 1292,
+      "resets": 52,
+      "class": "Dark Wizard",
+      "guild": "Valhalla",
+      "score": 6237
+    },
+    {
+      "rank": 48,
+      "name": "DameZephyrmort",
+      "level": 946,
+      "resets": 55,
+      "class": "Elf",
+      "guild": "RuneWardens",
+      "score": 6236
+    },
+    {
+      "rank": 49,
+      "name": "IronKael",
+      "level": 1067,
+      "resets": 53,
+      "class": "Dark Lord",
+      "guild": "Valhalla",
+      "score": 6142
+    },
+    {
+      "rank": 50,
+      "name": "SoulMireththal",
+      "level": 959,
+      "resets": 53,
+      "class": "Rune Wizard",
+      "guild": "ObsidianOrder",
+      "score": 6019
+    },
+    {
+      "rank": 51,
+      "name": "OnyxZephyrax",
+      "level": 806,
+      "resets": 54,
+      "class": "Elf",
+      "guild": "BloodMoon",
+      "score": 5961
+    },
+    {
+      "rank": 52,
+      "name": "MasterRenyaax",
+      "level": 923,
+      "resets": 51,
+      "class": "Dark Knight",
+      "guild": "GoldenAegis",
+      "score": 5773
+    },
+    {
+      "rank": 53,
+      "name": "SoulSelenethal",
+      "level": 996,
+      "resets": 48,
+      "class": "Dark Lord",
+      "guild": "ShadowReign",
+      "score": 5526
+    },
+    {
+      "rank": 54,
+      "name": "SoulAshenros",
+      "level": 1309,
+      "resets": 43,
+      "class": "Rune Wizard",
+      "guild": "NightVeil",
+      "score": 5334
+    },
+    {
+      "rank": 55,
+      "name": "SirThessagath",
+      "level": 1079,
+      "resets": 45,
+      "class": "Dark Wizard",
+      "guild": "Valhalla",
+      "score": 5319
+    },
+    {
+      "rank": 56,
+      "name": "OnyxAshen",
+      "level": 858,
+      "resets": 47,
+      "class": "Summoner",
+      "guild": "RuneWardens",
+      "score": 5293
+    },
+    {
+      "rank": 57,
+      "name": "WraithKorrinwyn",
+      "level": 1240,
+      "resets": 43,
+      "class": "Dark Wizard",
+      "guild": null,
+      "score": 5260
+    },
+    {
+      "rank": 58,
+      "name": "StormMordraheim",
+      "level": 1003,
+      "resets": 45,
+      "class": "Dark Lord",
+      "guild": "Eternia",
+      "score": 5218
+    },
+    {
+      "rank": 59,
+      "name": "KingIliyasros",
+      "level": 948,
+      "resets": 43,
+      "class": "Magic Gladiator",
+      "guild": "BloodMoon",
+      "score": 4953
+    },
+    {
+      "rank": 60,
+      "name": "FrostVexion",
+      "level": 1345,
+      "resets": 39,
+      "class": "Grow Lancer",
+      "guild": null,
+      "score": 4940
+    },
+    {
+      "rank": 61,
+      "name": "LordIliyasion",
+      "level": 1305,
+      "resets": 39,
+      "class": "Dark Lord",
+      "guild": "Valhalla",
+      "score": 4895
+    },
+    {
+      "rank": 62,
+      "name": "WraithTyriuswyn",
+      "level": 1127,
+      "resets": 40,
+      "class": "Magic Gladiator",
+      "guild": "GoldenAegis",
+      "score": 4827
+    },
+    {
+      "rank": 63,
+      "name": "MasterSkarnmort",
+      "level": 1043,
+      "resets": 40,
+      "class": "Grow Lancer",
+      "guild": "DragonFangs",
+      "score": 4753
+    },
+    {
+      "rank": 64,
+      "name": "NightIliyasmort",
+      "level": 1319,
+      "resets": 36,
+      "class": "Grow Lancer",
+      "guild": null,
+      "score": 4594
+    },
+    {
+      "rank": 65,
+      "name": "SirZephyrdrel",
+      "level": 904,
+      "resets": 39,
+      "class": "Rage Fighter",
+      "guild": null,
+      "score": 4484
+    },
+    {
+      "rank": 66,
+      "name": "EmberLyradrel",
+      "level": 826,
+      "resets": 37,
+      "class": "Elf",
+      "guild": "CrimsonPact",
+      "score": 4196
+    },
+    {
+      "rank": 67,
+      "name": "DameNyx",
+      "level": 856,
+      "resets": 36,
+      "class": "Dark Lord",
+      "guild": "Eternia",
+      "score": 4121
+    },
+    {
+      "rank": 68,
+      "name": "DameKorringath",
+      "level": 881,
+      "resets": 34,
+      "class": "Dark Lord",
+      "guild": "NightVeil",
+      "score": 3966
+    },
+    {
+      "rank": 69,
+      "name": "StormLyradrel",
+      "level": 888,
+      "resets": 32,
+      "class": "Dark Knight",
+      "guild": "GoldenAegis",
+      "score": 3748
+    },
+    {
+      "rank": 70,
+      "name": "OnyxKorrinir",
+      "level": 1194,
+      "resets": 28,
+      "class": "Grow Lancer",
+      "guild": "Valhalla",
+      "score": 3624
+    },
+    {
+      "rank": 71,
+      "name": "CrimsonOrinthal",
+      "level": 968,
+      "resets": 28,
+      "class": "Grow Lancer",
+      "guild": "Valhalla",
+      "score": 3413
+    },
+    {
+      "rank": 72,
+      "name": "LordTyriusthal",
+      "level": 948,
+      "resets": 28,
+      "class": "Grow Lancer",
+      "guild": "DragonFangs",
+      "score": 3383
+    },
+    {
+      "rank": 73,
+      "name": "StormKorrinmort",
+      "level": 1028,
+      "resets": 27,
+      "class": "Elf",
+      "guild": "DragonFangs",
+      "score": 3378
+    },
+    {
+      "rank": 74,
+      "name": "WraithNyxax",
+      "level": 894,
+      "resets": 28,
+      "class": "Rune Wizard",
+      "guild": null,
+      "score": 3349
+    },
+    {
+      "rank": 75,
+      "name": "MasterIliyasion",
+      "level": 803,
+      "resets": 27,
+      "class": "Elf",
+      "guild": "ObsidianOrder",
+      "score": 3123
+    },
+    {
+      "rank": 76,
+      "name": "ShadowNyxion",
+      "level": 774,
+      "resets": 27,
+      "class": "Dark Knight",
+      "guild": "ObsidianOrder",
+      "score": 3114
+    },
+    {
+      "rank": 77,
+      "name": "RuneTyriusir",
+      "level": 1032,
+      "resets": 23,
+      "class": "Magic Gladiator",
+      "guild": null,
+      "score": 2942
+    },
+    {
+      "rank": 78,
+      "name": "RuneTyriusdrel",
+      "level": 970,
+      "resets": 23,
+      "class": "Summoner",
+      "guild": "DragonFangs",
+      "score": 2895
+    },
+    {
+      "rank": 79,
+      "name": "LordNyxion",
+      "level": 1076,
+      "resets": 21,
+      "class": "Summoner",
+      "guild": "DragonFangs",
+      "score": 2776
+    },
+    {
+      "rank": 80,
+      "name": "SoulVexheim",
+      "level": 1004,
+      "resets": 20,
+      "class": "Dark Wizard",
+      "guild": "BloodMoon",
+      "score": 2589
+    },
+    {
+      "rank": 81,
+      "name": "DameNyxwyn",
+      "level": 913,
+      "resets": 20,
+      "class": "Dark Wizard",
+      "guild": null,
+      "score": 2528
+    },
+    {
+      "rank": 82,
+      "name": "RuneLyraros",
+      "level": 1021,
+      "resets": 19,
+      "class": "Magic Gladiator",
+      "guild": "DragonFangs",
+      "score": 2511
+    },
+    {
+      "rank": 83,
+      "name": "SoulMirethir",
+      "level": 1128,
+      "resets": 18,
+      "class": "Summoner",
+      "guild": null,
+      "score": 2503
+    },
+    {
+      "rank": 84,
+      "name": "CrimsonDrakarros",
+      "level": 931,
+      "resets": 19,
+      "class": "Dark Lord",
+      "guild": "ShadowReign",
+      "score": 2436
+    },
+    {
+      "rank": 85,
+      "name": "WraithTyriusmort",
+      "level": 1262,
+      "resets": 16,
+      "class": "Rune Wizard",
+      "guild": "RuneWardens",
+      "score": 2427
+    },
+    {
+      "rank": 86,
+      "name": "SirOringath",
+      "level": 1103,
+      "resets": 17,
+      "class": "Dark Knight",
+      "guild": "GoldenAegis",
+      "score": 2398
+    },
+    {
+      "rank": 87,
+      "name": "MasterSkarnheim",
+      "level": 1107,
+      "resets": 14,
+      "class": "Grow Lancer",
+      "guild": "Valhalla",
+      "score": 2062
+    },
+    {
+      "rank": 88,
+      "name": "RuneVorn",
+      "level": 1135,
+      "resets": 13,
+      "class": "Dark Lord",
+      "guild": "NightVeil",
+      "score": 2015
+    },
+    {
+      "rank": 89,
+      "name": "SirVexir",
+      "level": 1264,
+      "resets": 12,
+      "class": "Magic Gladiator",
+      "guild": "ShadowReign",
+      "score": 2014
+    },
+    {
+      "rank": 90,
+      "name": "GoldMirethdrel",
+      "level": 876,
+      "resets": 11,
+      "class": "Rune Wizard",
+      "guild": null,
+      "score": 1546
+    },
+    {
+      "rank": 91,
+      "name": "DameTyriusheim",
+      "level": 1201,
+      "resets": 7,
+      "class": "Dark Wizard",
+      "guild": "NightVeil",
+      "score": 1441
+    },
+    {
+      "rank": 92,
+      "name": "NightVexros",
+      "level": 789,
+      "resets": 11,
+      "class": "Rune Wizard",
+      "guild": "Valhalla",
+      "score": 1434
+    },
+    {
+      "rank": 93,
+      "name": "StormKaelgath",
+      "level": 1185,
+      "resets": 7,
+      "class": "Rage Fighter",
+      "guild": "Eternia",
+      "score": 1420
+    },
+    {
+      "rank": 94,
+      "name": "LordVornen",
+      "level": 959,
+      "resets": 9,
+      "class": "Dark Knight",
+      "guild": "ObsidianOrder",
+      "score": 1419
+    },
+    {
+      "rank": 95,
+      "name": "NightOrinax",
+      "level": 1291,
+      "resets": 3,
+      "class": "Dark Knight",
+      "guild": "ShadowReign",
+      "score": 1116
+    },
+    {
+      "rank": 96,
+      "name": "GoldOrinen",
+      "level": 1234,
+      "resets": 2,
+      "class": "Grow Lancer",
+      "guild": "ShadowReign",
+      "score": 949
+    },
+    {
+      "rank": 97,
+      "name": "SirRenyadrel",
+      "level": 809,
+      "resets": 6,
+      "class": "Magic Gladiator",
+      "guild": null,
+      "score": 929
+    },
+    {
+      "rank": 98,
+      "name": "GoldOrin",
+      "level": 915,
+      "resets": 3,
+      "class": "Elf",
+      "guild": "GoldenAegis",
+      "score": 745
+    },
+    {
+      "rank": 99,
+      "name": "LordOrinros",
+      "level": 780,
+      "resets": 4,
+      "class": "Rune Wizard",
+      "guild": "ShadowReign",
+      "score": 685
+    },
+    {
+      "rank": 100,
+      "name": "OnyxKorrinthal",
+      "level": 908,
+      "resets": 1,
+      "class": "Dark Wizard",
+      "guild": "ShadowReign",
+      "score": 518
+    }
+  ]
+}
