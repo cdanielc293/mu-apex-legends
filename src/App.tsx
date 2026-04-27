@@ -11,6 +11,7 @@ import News from "./pages/News";
 import Rankings from "./pages/Rankings";
 import Classes from "./pages/Classes";
 import Download from "./pages/Download";
+import Shop from "./pages/Shop";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
