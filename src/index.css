@@ -2,95 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* =========================================================
+   Mu Eternia — Dark Gold & Obsidian Design System
+   All colors are HSL. Use semantic tokens only in components.
+   ========================================================= */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Obsidian backgrounds */
+    --background: 30 12% 5%;
+    --foreground: 42 32% 88%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 14% 7%;
+    --card-foreground: 42 30% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 14% 6%;
+    --popover-foreground: 42 30% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Antique gold primary */
+    --primary: 42 78% 55%;
+    --primary-foreground: 30 30% 8%;
+    --primary-glow: 45 90% 65%;
+    --primary-deep: 38 70% 38%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 10% 12%;
+    --secondary-foreground: 42 30% 88%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 8% 11%;
+    --muted-foreground: 38 14% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 38 70% 45%;
+    --accent-foreground: 30 30% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 42 30% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 140 55% 45%;
+    --warning: 35 90% 55%;
 
-    --radius: 0.5rem;
+    --border: 38 30% 18%;
+    --input: 30 10% 13%;
+    --ring: 42 78% 55%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.25rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Surfaces */
+    --surface-1: 30 14% 8%;
+    --surface-2: 30 12% 11%;
+    --surface-3: 30 10% 14%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 92% 62%), hsl(38 78% 42%) 50%, hsl(30 60% 28%));
+    --gradient-gold-soft: linear-gradient(135deg, hsl(42 70% 50% / 0.18), hsl(38 60% 30% / 0.05));
+    --gradient-obsidian: linear-gradient(180deg, hsl(30 14% 6%), hsl(30 12% 4%));
+    --gradient-radial-glow: radial-gradient(circle at 50% 0%, hsl(42 78% 55% / 0.18), transparent 60%);
+    --gradient-edge-fade: linear-gradient(180deg, transparent 0%, hsl(30 12% 5% / 0.4) 50%, hsl(30 12% 5%) 100%);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(42 78% 55% / 0.45);
+    --shadow-gold-lg: 0 20px 60px -15px hsl(42 90% 55% / 0.55);
+    --shadow-deep: 0 30px 80px -20px hsl(0 0% 0% / 0.8);
+    --shadow-inset-gold: inset 0 1px 0 hsl(45 90% 70% / 0.35), inset 0 -1px 0 hsl(30 50% 15% / 0.6);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Typography */
+    --font-display: "Cinzel", "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    /* Motion */
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-glow: box-shadow 0.5s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (admin) */
+    --sidebar-background: 30 14% 6%;
+    --sidebar-foreground: 42 30% 85%;
+    --sidebar-primary: 42 78% 55%;
+    --sidebar-primary-foreground: 30 30% 8%;
+    --sidebar-accent: 30 10% 12%;
+    --sidebar-accent-foreground: 42 30% 88%;
+    --sidebar-border: 38 25% 16%;
+    --sidebar-ring: 42 78% 55%;
   }
 
+  /* Force dark theme — this is a dark-only product */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 30 12% 5%;
+    --foreground: 42 32% 88%;
+    --card: 30 14% 7%;
+    --card-foreground: 42 30% 90%;
+    --popover: 30 14% 6%;
+    --popover-foreground: 42 30% 90%;
+    --primary: 42 78% 55%;
+    --primary-foreground: 30 30% 8%;
+    --secondary: 30 10% 12%;
+    --secondary-foreground: 42 30% 88%;
+    --muted: 30 8% 11%;
+    --muted-foreground: 38 14% 60%;
+    --accent: 38 70% 45%;
+    --accent-foreground: 30 30% 8%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 42 30% 95%;
+    --border: 38 30% 18%;
+    --input: 30 10% 13%;
+    --ring: 42 78% 55%;
   }
 }
 
@@ -99,7 +112,106 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    @apply scroll-smooth;
+    color-scheme: dark;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(ellipse at top, hsl(42 50% 20% / 0.18), transparent 60%),
+      radial-gradient(ellipse at bottom, hsl(30 30% 10% / 0.6), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    @apply tracking-wide;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.35);
+    color: hsl(var(--foreground));
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(hsl(var(--primary-deep)), hsl(var(--primary)));
+    border-radius: 8px;
+    border: 2px solid hsl(var(--background));
+  }
+}
+
+@layer components {
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .border-gold {
+    border-color: hsl(var(--primary) / 0.6);
+  }
+
+  .surface-card {
+    background: linear-gradient(180deg, hsl(var(--surface-1)), hsl(var(--surface-2)));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .ornate-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.6), transparent);
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .ember-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  .ember-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-radial-glow);
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-sans { font-family: var(--font-sans); }
+  .container-page { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+}
+
+/* Keyframes */
+@keyframes ember-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-20px) translateX(8px); opacity: 1; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5); }
+  50% { box-shadow: 0 0 0 12px hsl(var(--primary) / 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
